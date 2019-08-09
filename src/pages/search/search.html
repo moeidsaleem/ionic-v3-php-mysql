@@ -1,0 +1,55 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar (ionInput)="onSearch($event)"></ion-searchbar>
+  <ion-refresher (ionRefresh)="loadNewsList($event, true)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" refreshingSpinner="crescent">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let news of newsList" class="news" (click)="goItemPage(news)">
+    <img [src]="news.image" />
+    <ion-row padding-top padding-left [style.font-size]="app.fontSize+'px'">{{news.title}}</ion-row>
+    <ion-row padding-bottom padding-left [style.font-size]="(app.fontSize*0.7)+'px'">{{app.formatDate(news.published_at)
+      | date:'dd MMM h:mm'}}</ion-row>
+  </ion-card>
+
+  <div *ngIf="newsList.length==0 && query.length>0 && !isInternet && errorMessage==null" text-center padding>
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+
+  <div *ngIf="errorMessage!=null" text-center>
+    <h3>{{errorMessage}}</h3>
+  </div>
+
+  <div *ngIf="isInternet">
+    <h4 text-center>No internet connection.</h4>
+    <ion-row justify-content-center>
+      <button col-4 ion-button icon-left color="general" (click)="loadNewsList()">
+        <ion-icon name="refresh"></ion-icon>
+        Try again
+      </button>
+      <button ion-button col-4 color="general" (click)="goSavedNews()">
+        Saved News
+      </button>
+    </ion-row>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="loadNewsList($event)">
+    <ion-infinite-scroll-content loadingSpinner="crescent">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <ion-fab right bottom *ngIf="showFloat">
+    <button ion-fab color="general" (click)="scrollToTop()">
+      <ion-icon name="ios-arrow-up"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,38 @@
+.dark-theme {
+    ion-content {
+      background-color: #4c4948;
+      color: #fff;
+    }
+    .toolbar-title {
+      color: #c0a25b;
+    }
+    .header .toolbar-background {
+      border-color: #c0a25b;
+      background-color: #585554;
+    }
+    .tabbar{
+      background-color: #585554 !important;
+    }
+    .card {
+      background-color: #585554;
+    }
+    .icon{
+      color:#c0a25b;
+    }
+    ion-item,button.item {
+      background-color: #585554;
+      color: #c0a25b; 
+    }
+    .fab-md-general, .fab-ios-general{
+      background-color: #c0a25b;
+    }
+    .header ion-searchbar .icon {
+      color: #222;
+    }
+ 
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+  color: #c0a25b !important;
+}
+
+
+}

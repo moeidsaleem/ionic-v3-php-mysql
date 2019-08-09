@@ -1,0 +1,19 @@
+.light-theme {
+    .toolbar-title {
+      color: #c0a25b;
+    }
+  
+    .header .toolbar-background {
+      background-color: #4c4948;
+    }
+  
+    .header .icon{
+      color:#c0a25b;
+    }
+    .header ion-searchbar .icon {
+      color: #222;
+    }
+    .tabbar{
+      background-color: #4c4948 !important;
+    }
+  }

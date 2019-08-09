@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "403679865245",
+    "firebase_url": "https://freshisha-62770.firebaseio.com",
+    "project_id": "freshisha-62770",
+    "storage_bucket": "freshisha-62770.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403679865245:android:511f5f47cd9bdd51",
+        "android_client_info": {
+          "package_name": "app.freshisha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403679865245-epbclkvmlr1u0jbpd2je981n2vckmmq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9xl89fGVtl3fBZJMph4j9qrXwwvHGqe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403679865245-epbclkvmlr1u0jbpd2je981n2vckmmq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
