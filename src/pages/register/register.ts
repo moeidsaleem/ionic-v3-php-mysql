@@ -120,7 +120,7 @@ export class RegisterPage {
       });
      
       alert.present();
-   this.navCtrl.push(ProfilePage);
+   this.navCtrl.pop();
   
   }else
   {

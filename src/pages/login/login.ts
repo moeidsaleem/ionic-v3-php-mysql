@@ -99,7 +99,7 @@ export class LoginPage  {
               });
 
               alert.present();
-              this.navCtrl.push(ProfilePage, data);
+              this.navCtrl.pop();
             } else {
               let alert = this.alertCtrl.create({
                 title: "ERROR",

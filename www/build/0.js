@@ -45,11 +45,10 @@ var RegisterPageModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_profile__ = __webpack_require__(155);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,7 +58,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -81,36 +79,36 @@ var RegisterPage = /** @class */ (function () {
         //// check to confirm the username, email, telephone and password fields are filled
         var _this = this;
         if (this.username.value == "") {
-            var alert = this.alertCtrl.create({
+            var alert_1 = this.alertCtrl.create({
                 title: "ATTENTION",
                 subTitle: "Username field is empty",
                 buttons: ['OK']
             });
-            alert.present();
+            alert_1.present();
         }
         else if (this.email.value == "") {
-            var alert = this.alertCtrl.create({
+            var alert_2 = this.alertCtrl.create({
                 title: "ATTENTION",
                 subTitle: "Email field is empty",
                 buttons: ['OK']
             });
-            alert.present();
+            alert_2.present();
         }
         else if (this.mobile.value == "") {
-            var alert = this.alertCtrl.create({
+            var alert_3 = this.alertCtrl.create({
                 title: "ATTENTION",
                 subTitle: "Mobile number field is empty",
                 buttons: ['OK']
             });
-            alert.present();
+            alert_3.present();
         }
         else if (this.password.value == "") {
-            var alert = this.alertCtrl.create({
+            var alert_4 = this.alertCtrl.create({
                 title: "ATTENTION",
                 subTitle: "Password field is empty",
                 buttons: ['OK']
             });
-            alert.present();
+            alert_4.present();
         }
         else {
             var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
@@ -132,21 +130,21 @@ var RegisterPage = /** @class */ (function () {
                     loader_1.dismiss();
                     if (res == "Registration successfull") {
                         localStorage.setItem('user', JSON.stringify(data_1));
-                        var alert = _this.alertCtrl.create({
+                        var alert_5 = _this.alertCtrl.create({
                             title: "CONGRATS",
                             subTitle: (res),
                             buttons: ['OK']
                         });
-                        alert.present();
-                        _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__profile_profile__["a" /* ProfilePage */]);
+                        alert_5.present();
+                        _this.navCtrl.pop();
                     }
                     else {
-                        var alert = _this.alertCtrl.create({
+                        var alert_6 = _this.alertCtrl.create({
                             title: "ERROR",
                             subTitle: (res),
                             buttons: ['OK']
                         });
-                        alert.present();
+                        alert_6.present();
                     }
                 });
             });
@@ -172,10 +170,9 @@ var RegisterPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-register',template:/*ion-inline-start:"/Users/shabeer/projects/testrix/freelancing/ionic3/ionic-app/src/pages/register/register.html"*/'\n<ion-content padding>\n\n\n\n  <ion-item text-center no-lines>\n<h2>Registeration</h2>\n  </ion-item>\n    <ion-item>\n      <ion-label floating >Email</ion-label>\n      <ion-input type="email" placeholder="Email" name="email" #email></ion-input>\n    </ion-item>\n    \n    <ion-item>\n        <ion-label floating >Mobile</ion-label>\n        <ion-input type="number" placeholder="Mobile Number" name="mobile" #mobile></ion-input>\n      </ion-item>\n\n    <ion-item>\n        <ion-label floating >username</ion-label>\n        <ion-input type="text" placeholder="Username" name="fullname" #username></ion-input>\n      </ion-item>\n      \n  \n    <ion-item>\n        <ion-label floating >password</ion-label>\n        <ion-input type="password" placeholder="Password" name="password" #password></ion-input>\n      </ion-item>\n  \n\n      <ion-item>\n          <button ion-button block color="secondary" (click)="Register()">Register</button>\n         </ion-item>\n      <ion-item>\n         <button ion-button block (tap)="go(\'LoginPage\')">Login</button>\n        </ion-item>\n     \n  \n  </ion-content>\n  '/*ion-inline-end:"/Users/shabeer/projects/testrix/freelancing/ionic3/ionic-app/src/pages/register/register.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__providers_api_api__["a" /* ApiProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_api_api__["a" /* ApiProvider */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_api_api__["a" /* ApiProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
     ], RegisterPage);
     return RegisterPage;
-    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=register.js.map

@@ -52,7 +52,7 @@ export class ProfilePage {
   go(page){
     this.navCtrl.push(page)
   }
-  ngOnInit() {
+  ionViewDidEnter() {
     let user = JSON.parse(localStorage.getItem('user'))
 
 
