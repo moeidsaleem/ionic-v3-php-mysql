@@ -1,3 +1,4 @@
+import { ProfilePage } from './../profile/profile';
 import { Component } from '@angular/core';
 import { HomePage } from '../home/home';
 import { CategoryPage } from '../category/category';
@@ -12,7 +13,7 @@ export class TabsPage {
   tab1Root = HomePage;
   tab2Root = CategoryPage;
   tab3Root = SearchPage;
-  tab4Root = SettingsPage;
+  tab4Root = ProfilePage;
 
   constructor() {}
 }

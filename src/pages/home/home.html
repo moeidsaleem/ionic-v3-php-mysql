@@ -1,14 +1,7 @@
 <ion-header>
     <ion-navbar>
         <ion-title>{{category.title}}</ion-title>
-        <ion-buttons end >
-            <button ion-button color="secondary" style="background-color:white" 
-            *ngIf="loggedIn == false  "
-            (tap)="login()">LOGIN</button>
-              <button ion-button color="secondary" style="background-color:white" 
-            *ngIf="loggedIn  == true  "
-            (tap)="logout()">Logout</button>
-        </ion-buttons>
+      
   </ion-navbar>
 </ion-header>
 

@@ -43,6 +43,11 @@ export class HomePage {
     }
   }
 
+
+  goLogin(){
+    this.navCtrl.push('RegisterPage')
+  }
+
   loadNewsList(infiniteScroll: any = null, refresh: boolean = false) {
     if (this.network.type !== "none") {
       this.isInternet = false;
@@ -102,16 +107,16 @@ export class HomePage {
     this.navCtrl.push(SavePage);
   }
 
-login(){
-  this.api.login().subscribe(res=>{
-      console.log('response', res)
-      if(res === 'Your Login success'){
-        localStorage.setItem('status', 'active')
-        this.isLoggedIn()
-      }
+// login(){
+//   this.api.login().subscribe(res=>{
+//       console.log('response', res)
+//       if(res === 'Your Login success'){
+//         localStorage.setItem('status', 'active')
+//         this.isLoggedIn()
+//       }
 
-  })
-}
+//   })
+// }
 
   isLoggedIn():boolean{
    if(localStorage.getItem('status') == 'active'){

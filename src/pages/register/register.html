@@ -1,0 +1,40 @@
+
+<ion-content padding>
+
+
+
+  <ion-item text-center no-lines>
+<h2>Registeration</h2>
+  </ion-item>
+    <ion-item>
+      <ion-label floating >Email</ion-label>
+      <ion-input type="email" placeholder="Email" name="email" #email></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label floating >Mobile</ion-label>
+        <ion-input type="number" placeholder="Mobile Number" name="mobile" #mobile></ion-input>
+      </ion-item>
+
+    <ion-item>
+        <ion-label floating >username</ion-label>
+        <ion-input type="text" placeholder="Username" name="fullname" #username></ion-input>
+      </ion-item>
+      
+  
+    <ion-item>
+        <ion-label floating >password</ion-label>
+        <ion-input type="password" placeholder="Password" name="password" #password></ion-input>
+      </ion-item>
+  
+
+      <ion-item>
+          <button ion-button block color="secondary" (click)="Register()">Register</button>
+         </ion-item>
+      <ion-item>
+         <button ion-button block (tap)="go('LoginPage')">Login</button>
+        </ion-item>
+     
+  
+  </ion-content>
+  

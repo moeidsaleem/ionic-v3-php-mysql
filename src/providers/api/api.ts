@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { Storage } from '@ionic/storage';
@@ -40,12 +40,35 @@ export class ApiProvider {
         }
     }
 
-    login(){
-        return this.http.get(this.BASE_URL + '/appdb/login.php')
-        .map(res=> res.json())
+    login(data){
+        var headers = new Headers();
+        headers.append("Accept", 'application/json');
+        headers.append('Content-Type', 'application/json');
+        let options = new RequestOptions({
+          headers: headers
+        });
+       return this.http.post(this.BASE_URL + '/appdb/login.php', data, options)
+        .map(res => res.json())
     }
-    register(user:User){
-        return this.http.post(this.BASE_URL +'/appdb/register.php', user)
+
+    register(data){
+        var headers = new Headers();
+        headers.append("Accept", 'application/json');
+        headers.append('Content-Type', 'application/json');
+        let options = new RequestOptions({
+          headers: headers
+        });
+       return this.http.post(this.BASE_URL + '/appdb/register.php', data, options)
+        .map(res => res.json())
+    }
+    fetchProfile(data){
+        var headers = new Headers();
+        headers.append("Accept", 'application/json');
+        headers.append('Content-Type', 'application/json');
+        let options = new RequestOptions({
+          headers: headers
+        });
+       return this.http.post(this.BASE_URL + '/appdb/register.php', data, options)
         .map(res => res.json())
     }
 

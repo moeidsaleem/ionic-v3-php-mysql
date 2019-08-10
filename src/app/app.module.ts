@@ -16,6 +16,8 @@ import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { NewsPage } from '../pages/news/news';
 import { SavePage } from '../pages/save/save';
+import { ProfilePage } from '../pages/profile/profile';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { SavePage } from '../pages/save/save';
     SavePage,
     HomePage,
     NewsPage,
-    TabsPage
+    TabsPage,ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { SavePage } from '../pages/save/save';
     SettingsPage,
     HomePage,
     NewsPage,
-    TabsPage
+    TabsPage,
+    ProfilePage
   ],
   providers: [
     Push,

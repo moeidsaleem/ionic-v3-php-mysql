@@ -9,6 +9,7 @@ import { SavePage } from '../save/save';
 })
 export class SettingsPage {
   nightmode: boolean = true;
+  user;
 
   constructor(public navCtrl: NavController,
     private app: ApiProvider,
@@ -31,5 +32,13 @@ export class SettingsPage {
 
   goSavedNews() {
     this.navCtrl.push(SavePage);
+  }
+
+  getUser(){
+    if(localStorage.getItem('user') == null){
+      return false
+    }else{
+      return true;
+    }
   }
 }
